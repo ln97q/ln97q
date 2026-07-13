@@ -25,7 +25,6 @@
       const ngHtml = char.statusNg.map(item => `<li>✔ ${item}</li>`).join('');
       const expHtml = char.expressions.map(item => `<li>${item}</li>`).join('');
 
-      // ハートのメーターを作成する処理
       let heartsHtml = '';
       for(let i = 0; i < 5; i++) {
         if(i < char.relationship.hearts) {
@@ -58,12 +57,17 @@
           
           <div class="relationship-box">
             <div class="rel-header">
-              <span class="rel-icon">🏀</span>
+              <span class="rel-icon">🐶</span>
               <span class="rel-title">${char.relationship.title}</span>
             </div>
             
             <div class="rel-content">
-              <div class="rel-gradient-block"></div>
+              <div class="rel-gradient-block">
+                <div class="rel-text-side">${char.relationship.text}</div>
+                <div class="rel-image-side" style="background-image: url('${char.relationship.relImage}');">
+                  <div class="fade-mask"></div>
+                </div>
+              </div>
               
               <div class="rel-chat-area">
                 <div class="rel-left-user">
