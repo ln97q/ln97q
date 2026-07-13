@@ -9,13 +9,14 @@ const characterData = [
     statusOk: ["カツサンド", "メロンパン"],
     statusNg: ["数学", "いじわる"],
     expressions: ["笑顔", "何も分かってない顔"],
-    // 画像の右下にあった「関係性」のデータをいぬ用に用意しました
     relationship: {
       title: "関係性",
-      targetName: "魔法少女", // 相手の名前
-      hearts: 4, // 満点は5（メーターの青いハートの数）
-      leftBubble: "守りたい対象 →", // 左側のセリフ
-      rightBubble: "頼りにしてる！" // 右側のセリフ
+      text: "ここに2人の細かい関係性の説明テキストをたっぷり書くことができます。文字が左側に並びます。",
+      relImage: "https://placehold.co/400x300/ff69b4/ffffff?text=Illustration", // ★ここにイラストの画像URL（またはファイル名）を入れます
+      targetName: "魔法少女",
+      hearts: 4,
+      leftBubble: "守りたい対象 →",
+      rightBubble: "頼りにしてる！"
     }
   },
   {
@@ -27,13 +28,14 @@ const characterData = [
     statusOk: ["ショートケーキ", "睡眠"],
     statusNg: ["争い", "好奇心"],
     expressions: ["正義感", "微笑み", "喜び"],
-    // 画像の右下にあった「関係性」のデータを魔法少女用に用意しました
     relationship: {
       title: "関係性",
-      targetName: "いぬ", // 相手の名前
-      hearts: 3, // 満点は5
-      leftBubble: "お世話する枠 →", // 左側のセリフ
-      rightBubble: "いつもありがとう" // 右側のセリフ
+      text: "ここにもう片方の視点からの関係性説明テキストを書くことができます。",
+      relImage: "https://placehold.co/400x300/ff1493/ffffff?text=Illustration", // ★ここにイラストの画像URLを入れます
+      targetName: "いぬ",
+      hearts: 3,
+      leftBubble: "お世話する枠 →",
+      rightBubble: "いつもありがとう"
     }
   }
 ];
