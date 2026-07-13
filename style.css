@@ -1,4 +1,3 @@
-/* 全体の背景（ブルーから、薄いパステル紫のグラデーションに変更） */
 body {
   background: linear-gradient(135deg, #f3effa 0%, #e5daf5 100%);
   font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', sans-serif;
@@ -8,7 +7,6 @@ body {
   min-height: 100vh;
 }
 
-/* タイトルの文字 */
 h1 {
   text-align: center;
   color: #4a5568;
@@ -17,7 +15,6 @@ h1 {
   letter-spacing: 1px;
 }
 
-/* キャラクターカードを並べるコンテナ */
 .container {
   display: flex;
   flex-direction: column;
@@ -26,7 +23,6 @@ h1 {
   margin: 0 auto;
 }
 
-/* キャラクターごとの白い大きなカード */
 .char-card {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(10px);
@@ -39,14 +35,12 @@ h1 {
   border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
-/* 横並びにするレイアウト（スマホでも崩れないように調整） */
 .left-section {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-/* LINE風の吹き出し（位置と余白を微調整） */
 .speech-bubble {
   background: #ffffff;
   border-radius: 14px;
@@ -56,35 +50,31 @@ h1 {
   display: inline-block;
   align-self: flex-start;
   filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));
-  margin-bottom: 12px; /* 下のアイコンとの間に隙間を作る */
-  margin-left: 15px; /* アイコンの真上あたりに配置する調整 */
+  margin-bottom: 12px;
+  margin-left: 15px;
   font-size: 14px;
   color: #000000;
 }
 
-/* しっぽを「下向き」にして、下のアイコンを指すように変更 */
 .speech-bubble::after {
   content: '';
   position: absolute;
-  bottom: -7px; /* 下側に飛び出させる */
-  left: 20px; /* 左端から20pxの位置（アイコンの真上あたり） */
+  bottom: -7px;
+  left: 20px;
   border-style: solid;
   border-width: 8px 7px 0 7px;
-  border-color: #ffffff transparent transparent transparent; /* 下向きの三角形 */
+  border-color: #ffffff transparent transparent transparent;
   display: block;
   width: 0;
   z-index: 1;
 }
 
-
-/* アイコンとプロフィールの並び */
 .profile-meta {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-/* まるいアイコン画像が入る場所 */
 .icon-placeholder {
   width: 75px;
   height: 75px;
@@ -93,7 +83,6 @@ h1 {
   flex-shrink: 0;
 }
 
-/* プロフィールテキスト（なまえ、高校1年など） */
 .profile-text h2 {
   margin: 0 0 5px 0;
   font-size: 18px;
@@ -106,7 +95,6 @@ h1 {
   color: #718096;
 }
 
-/* 丸で囲まれたタグ（オレ、きみ など） */
 .tags-container {
   display: flex;
   gap: 8px;
@@ -121,11 +109,13 @@ h1 {
   background: rgba(255,255,255,0.5);
 }
 
-/* 右側のOK/NG/表情のリスト */
 .right-section {
   background: rgba(255, 255, 255, 0.5);
   border-radius: 16px;
   padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .lists {
@@ -157,4 +147,88 @@ li {
   font-size: 13px;
   margin-bottom: 6px;
   color: #4a5568;
+}
+
+/* --- 関係性エリアのスタイル --- */
+.relationship-box {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 15px;
+}
+
+.rel-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.rel-icon {
+  font-size: 16px;
+}
+
+.rel-title {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.rel-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rel-gradient-block {
+  height: 80px;
+  border-radius: 12px;
+  background: linear-gradient(to right, #ffffff 0%, #718096 50%, #2d3748 100%);
+  border: 1px solid #e2e8f0;
+}
+
+.rel-chat-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.rel-left-user, .rel-right-user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rel-mini-icon {
+  width: 35px;
+  height: 35px;
+  background: #cbd5e1;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.rel-center-meta {
+  text-align: center;
+  font-size: 12px;
+}
+
+.rel-hearts {
+  margin-bottom: 4px;
+}
+
+.heart-icon {
+  color: #cbd5e1;
+  font-size: 14px;
+  margin: 0 1px;
+}
+
+.heart-icon.filled {
+  color: #4facfe; /* 青いハート */
+}
+
+.rel-bubble-left, .rel-bubble-right {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 11px;
+  white-space: nowrap;
 }
