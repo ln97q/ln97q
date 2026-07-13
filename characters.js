@@ -1,21 +1,21 @@
 // キャラクターのデータをここにまとめて管理します
 const characterData = [
   {
-    name: "キャラクターA",
-    age: "高校1年",
-    details: "16歳 / 189cm",
-    quote: "そろそろ付き合う？",
-    tags: ["オレ", "きみ"],
-    statusOk: ["甘いもの", "読書"],
-    statusNg: ["辛いもの", "人混み"],
-    expressions: ["笑顔", "イタズラ顔"]
+    name: "いぬ",
+    age: "高校2年",
+    details: "17歳 / 189cm",
+    quote: "可愛くて強くて頭いーの！？ずりー！",
+    tags: ["おれ", "（ちゃん付け）"],
+    statusOk: ["カツサンド", "メロンパン"],
+    statusNg: ["数学", "いじわる"],
+    expressions: ["笑顔", "何も分かってない顔"]
   },
   {
-    name: "キャラクターB",
-    age: "高校1年",
+    name: "魔法少女",
+    age: "高校2年",
     details: "16歳 / 178cm",
-    quote: "ねえわ！ダボ！！",
-    tags: ["オレ", "おまえ"],
+    quote: "私が守るからね",
+    tags: ["私", "（くん付け）"],
     statusOk: ["ゲーム", "スポーツ"],
     statusNg: ["勉強", "お化け"],
     expressions: ["怒り", "照れ", "呆れ"]
