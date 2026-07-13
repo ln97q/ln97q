@@ -14,10 +14,10 @@ const characterData = [
     name: "魔法少女",
     age: "高校2年",
     details: "16歳 / 178cm",
-    quote: "私が守るからね",
+    quote: "あなたのことも私が守るからね",
     tags: ["私", "（くん付け）"],
-    statusOk: ["ゲーム", "スポーツ"],
-    statusNg: ["勉強", "お化け"],
-    expressions: ["怒り", "照れ", "呆れ"]
+    statusOk: ["ショートケーキ", "睡眠"],
+    statusNg: ["争い", "好奇心"],
+    expressions: ["正義感", "微笑み", "喜び"]
   }
 ];
