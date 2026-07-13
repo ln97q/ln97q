@@ -1,39 +1,39 @@
 // キャラクターのデータをここにまとめて管理します
 const characterData = [
   {
-    name: "キャラクターA",
-    age: "高校1年",
-    details: "16歳 / 189cm",
-    quote: "そろそろ付き合う？",
-    tags: ["オレ", "きみ"],
-    statusOk: ["甘いもの", "読書"],
-    statusNg: ["辛いもの", "人混み"],
-    expressions: ["笑顔", "イタズラ顔"],
-    // 関係性のデータを追加
+    name: "いぬ",
+    age: "高校2年",
+    details: "17歳 / 189cm",
+    quote: "可愛くて強くて頭いーの！？ずりー！",
+    tags: ["おれ", "（ちゃん付け）"],
+    statusOk: ["カツサンド", "メロンパン"],
+    statusNg: ["数学", "いじわる"],
+    expressions: ["笑顔", "何も分かってない顔"],
+    // 画像の右下にあった「関係性」のデータをいぬ用に用意しました
     relationship: {
       title: "関係性",
-      targetName: "友人・恋人",
-      hearts: 4, // 満点は5。この数字に合わせて青いハートが並びます
-      leftBubble: "好きな人 →",
-      rightBubble: "♡♡♡♥♥" // 右下のチャット風セリフ
+      targetName: "魔法少女", // 相手の名前
+      hearts: 4, // 満点は5（メーターの青いハートの数）
+      leftBubble: "守りたい対象 →", // 左側のセリフ
+      rightBubble: "頼りにしてる！" // 右側のセリフ
     }
   },
   {
-    name: "キャラクターB",
-    age: "高校1年",
+    name: "魔法少女",
+    age: "高校2年",
     details: "16歳 / 178cm",
-    quote: "ねえわ！ダボ！！",
-    tags: ["オレ", "おまえ"],
-    statusOk: ["ゲーム", "スポーツ"],
-    statusNg: ["勉強", "お化け"],
-    expressions: ["怒り", "照れ", "呆れ"],
-    // 関係性のデータを追加
+    quote: "あなたのことも私が守るからね",
+    tags: ["私", "（くん付け）"],
+    statusOk: ["ショートケーキ", "睡眠"],
+    statusNg: ["争い", "好奇心"],
+    expressions: ["正義感", "微笑み", "喜び"],
+    // 画像の右下にあった「関係性」のデータを魔法少女用に用意しました
     relationship: {
       title: "関係性",
-      targetName: "友人・恋人",
-      hearts: 1, // 満点は5
-      leftBubble: "犬猿の仲 →",
-      rightBubble: "♥♥♥♥♥" // 右下のチャット風セリフ
+      targetName: "いぬ", // 相手の名前
+      hearts: 3, // 満点は5
+      leftBubble: "お世話する枠 →", // 左側のセリフ
+      rightBubble: "いつもありがとう" // 右側のセリフ
     }
   }
 ];
