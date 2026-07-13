@@ -20,15 +20,20 @@
       const card = document.createElement('div');
       card.className = 'char-card';
 
-      // タグの要素を作成
       const tagsHtml = char.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
-      
-      // OKリストの作成
       const okHtml = char.statusOk.map(item => `<li>✔ ${item}</li>`).join('');
-      // NGリストの作成
       const ngHtml = char.statusNg.map(item => `<li>✔ ${item}</li>`).join('');
-      // 表情リストの作成
       const expHtml = char.expressions.map(item => `<li>${item}</li>`).join('');
+
+      // ハートのメーターを作成する処理
+      let heartsHtml = '';
+      for(let i = 0; i < 5; i++) {
+        if(i < char.relationship.hearts) {
+          heartsHtml += '<span class="heart-icon filled">♥</span>';
+        } else {
+          heartsHtml += '<span class="heart-icon">♡</span>';
+        }
+      }
 
       card.innerHTML = `
         <div class="left-section">
@@ -43,11 +48,40 @@
           </div>
           <div class="tags-container">${tagsHtml}</div>
         </div>
+        
         <div class="right-section">
           <div class="lists">
             <div><h3>OK</h3><ul>${okHtml}</ul></div>
             <div><h3>NG</h3><ul>${ngHtml}</ul></div>
             <div><h3>よくする表情</h3><ul>${expHtml}</ul></div>
+          </div>
+          
+          <div class="relationship-box">
+            <div class="rel-header">
+              <span class="rel-icon">🏀</span>
+              <span class="rel-title">${char.relationship.title}</span>
+            </div>
+            
+            <div class="rel-content">
+              <div class="rel-gradient-block"></div>
+              
+              <div class="rel-chat-area">
+                <div class="rel-left-user">
+                  <div class="rel-mini-icon"></div>
+                  <div class="rel-bubble-left">${char.relationship.leftBubble}</div>
+                </div>
+                
+                <div class="rel-center-meta">
+                  <div class="rel-hearts">${heartsHtml}</div>
+                  <div class="rel-arrow">← ${char.relationship.targetName}</div>
+                </div>
+                
+                <div class="rel-right-user">
+                  <div class="rel-bubble-right">${char.relationship.rightBubble}</div>
+                  <div class="rel-mini-icon"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       `;
