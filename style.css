@@ -46,7 +46,7 @@ h1 {
   gap: 15px;
 }
 
-/* LINE風の吹き出し（白） */
+/* LINE風の吹き出し（位置と余白を微調整） */
 .speech-bubble {
   background: #ffffff;
   border-radius: 14px;
@@ -55,25 +55,27 @@ h1 {
   font-weight: bold;
   display: inline-block;
   align-self: flex-start;
-  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1)); /* ふんわりした影 */
-  margin-left: 10px; /* 左端に少しスペースをあける */
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));
+  margin-bottom: 12px; /* 下のアイコンとの間に隙間を作る */
+  margin-left: 15px; /* アイコンの真上あたりに配置する調整 */
   font-size: 14px;
   color: #000000;
 }
 
-/* LINE風の尖ったしっぽ部分 */
+/* しっぽを「下向き」にして、下のアイコンを指すように変更 */
 .speech-bubble::after {
   content: '';
   position: absolute;
-  top: 12px;
-  left: -8px; /* 左側に飛び出させる */
+  bottom: -7px; /* 下側に飛び出させる */
+  left: 20px; /* 左端から20pxの位置（アイコンの真上あたり） */
   border-style: solid;
-  border-width: 6px 10px 6px 0;
-  border-color: transparent #ffffff transparent transparent; /* 三角形を作る */
+  border-width: 8px 7px 0 7px;
+  border-color: #ffffff transparent transparent transparent; /* 下向きの三角形 */
   display: block;
   width: 0;
   z-index: 1;
 }
+
 
 /* アイコンとプロフィールの並び */
 .profile-meta {
