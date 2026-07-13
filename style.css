@@ -46,31 +46,33 @@ h1 {
   gap: 15px;
 }
 
-/* 画像にあった「チャット風の吹き出し」 */
+/* LINE風の吹き出し（白） */
 .speech-bubble {
   background: #ffffff;
-  border: 1.5px solid #cbd5e1;
-  border-radius: 30px;
-  padding: 10px 20px;
+  border-radius: 14px;
+  padding: 10px 16px;
   position: relative;
   font-weight: bold;
   display: inline-block;
   align-self: flex-start;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1)); /* ふんわりした影 */
+  margin-left: 10px; /* 左端に少しスペースをあける */
+  font-size: 14px;
+  color: #000000;
 }
 
-/* 吹き出しのしっぽ（左下につく小さな丸） */
+/* LINE風の尖ったしっぽ部分 */
 .speech-bubble::after {
   content: '';
   position: absolute;
-  bottom: -2px;
-  left: 25px;
-  width: 8px;
-  height: 8px;
-  background: #ffffff;
-  border-left: 1.5px solid #cbd5e1;
-  border-bottom: 1.5px solid #cbd5e1;
-  transform: rotate(-45deg);
+  top: 12px;
+  left: -8px; /* 左側に飛び出させる */
+  border-style: solid;
+  border-width: 6px 10px 6px 0;
+  border-color: transparent #ffffff transparent transparent; /* 三角形を作る */
+  display: block;
+  width: 0;
+  z-index: 1;
 }
 
 /* アイコンとプロフィールの並び */
